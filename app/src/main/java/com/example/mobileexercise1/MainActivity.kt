@@ -37,10 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         else {
 
-            val carPrice = Integer.parseInt(carPriceText.text.toString())
-            val downPayment = Integer.parseInt(downPaymentText.text.toString())
-            val loanPeriod = Integer.parseInt(loanPeriodText.text.toString())
-            val interestRate = Integer.parseInt(interestRateText.text.toString())
+            val carPrice = carPriceText.text.toString().toDouble()
+            val downPayment = downPaymentText.text.toString().toDouble()
+            val loanPeriod = loanPeriodText.text.toString().toDouble()
+            val interestRate = interestRateText.text.toString().toDouble()
             val loan = carPrice - downPayment
             val interest = loan * interestRate * loanPeriod
             val monRepay = (loan + interest) / loanPeriod / 12
